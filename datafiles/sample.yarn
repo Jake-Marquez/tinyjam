@@ -1,0 +1,14 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 662,499
+__PrivCrochet_tags: 
+title: Start
+---
+Hello there detective, It's nice to see you. I trust you are up to date on the latest news?
+-> I've been updated
+    Of course, detectives are quick on the uptake.
+        -> Thank you.
+-> I'm not aware
+    Of course, word travels slowly in the dungeon. I will prepare a dossier for you.
+        -> Thank you.
+===
