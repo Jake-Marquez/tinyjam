@@ -9,12 +9,14 @@ var _vspd = _down - _up;
 depth = -y
 
 if (movement_locked == true) {
+	sprite_index = spr_player_idle
+	image_speed=1
 	return;
 }
 
 if (_hspd != 0 || _vspd != 0)
 {
-    var _spd = 3;
+    var _spd = 2;
     var _dir = point_direction(0, 0, _hspd, _vspd);
     var _xadd = lengthdir_x(_spd, _dir);
     var _yadd = lengthdir_y(_spd, _dir);

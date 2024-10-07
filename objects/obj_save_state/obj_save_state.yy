@@ -8,8 +8,8 @@
   "name":"obj_save_state",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"syst",
+    "path":"folders/Objects/syst.yy",
   },
   "parentObjectId":null,
   "persistent":true,

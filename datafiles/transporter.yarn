@@ -1,0 +1,57 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 615,451
+__PrivCrochet_tags: 
+title: TransporterStart
+---
+State... identtitty...
+-> Pseudo Mu
+    Transporter... damaged...
+    -> Open cargo bay
+      Bay... locked...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 839,446
+__PrivCrochet_tags: 
+title: TransporterTakeSword
+---
+State... identtitty...
+-> Pseudo Mu
+    Transporter... damaged...
+    -> Walk away
+    -> Use Sword
+      The transporter cargo bay is pried open enough to retrieve the Lampsi tool, albeit breaking the rusty sword in the process. The other tools are too large to retrieve through the gap.
+      Lampsi should help gather the necessary resources to fix the transporter.
+      <<set $useSword to 1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1057,448
+__PrivCrochet_tags: 
+title: TransporterPartiallyOpen
+---
+State... identtitty...
+-> Pseudo Mu
+    Transporter... cargo bay... open... please... close...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 834,232
+__PrivCrochet_tags: 
+title: TransporterTakeRepulsor
+---
+State... identtitty...
+-> Pseudo Mu
+    Transporter... damaged...
+    -> Walk away
+    -> Use Repulsor
+      The Repulsor field crumples the cargo door, and you are able to reach in and retrieve the Deimos tool. Deimos and Lampsi should be enough to clear this up.
+      <<set $useRepulsor to 1>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1054,229
+__PrivCrochet_tags: 
+title: TransporterFullyOpen
+---
+State... identtitty...
+-> Pseudo Mu
+    Transporter...  open...
+===

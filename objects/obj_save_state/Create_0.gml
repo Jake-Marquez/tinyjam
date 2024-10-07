@@ -4,8 +4,13 @@ function _save_defaults() {
 	return {
 	    player_positions: {
 			rm_main_1_x: 700,
-			rm_main_1_y: 545,
-		}
+			rm_main_1_y: 545
+		},
+		takeSword: 0,
+		takeRepulsor: 0,
+		useSword: 0,
+		useRepulsor: 0,
+		rockDestroyed: 0,
 	}
 }
 

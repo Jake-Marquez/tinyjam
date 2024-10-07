@@ -28,8 +28,11 @@ if (ChatterboxIsStopped(box)) {
 	} else {
 		//draw_text(_x, _y, "(Press Space)");
 		if (array_length(options) == 0) {
-			if (keyboard_check_released(vk_space) && locked == false) {
-				ChatterboxContinue(box); 
+			if (keyboard_check_released(vk_space) && locked == false && space_bar_counter > 0) {
+				ChatterboxContinue(box);
+			}
+			if (keyboard_check_released(vk_space)) {
+				space_bar_counter += 1
 			}
 		}
 	}

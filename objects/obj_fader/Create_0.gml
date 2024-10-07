@@ -1,5 +1,5 @@
-image_xscale = camera_get_view_width(view_camera[0]) / 8
-image_yscale = camera_get_view_height(view_camera[0]) / 8
+image_xscale = camera_get_view_width(view_camera[0]) / 6
+image_yscale = camera_get_view_height(view_camera[0]) / 6
 x = 0
 y = 0
 depth = -10000

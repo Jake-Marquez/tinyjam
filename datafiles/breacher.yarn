@@ -1,0 +1,14 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1163,555
+__PrivCrochet_tags: 
+title: BreacherStart
+---
+You! Your not from Zeta squad, are you? I don't know how you got- ah, I know what you are.
+I feel flattered a pseudo-detective was sent, but I'm afraid it was rather shrewd to send you.
+You see I didn't end up in this situation haphazardly. You may have been met the crew on the way in, but they are not as they seem.
+They triggered a cave in and trapped me here two days ago. I thought I was going to waste away until you arrived.
+Look, time is of the essence. If you've entered here, they are already making plans to trap you as well.
+This repulsor, it's not strong enough to free me, but it may help you subdue them. Take it, secure the threat, and call for help to free me.
+<<set $takeRepulsor to 1>>
+===

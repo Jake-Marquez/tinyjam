@@ -1,9 +1,9 @@
 x = 310
 y = 700
 
-ChatterboxLoadFromFile("sample.yarn");
-box = ChatterboxCreate();
-ChatterboxJump(box, "Start");
+ChatterboxLoadFromFile(yarn_file);
+box = ChatterboxCreate(yarn_file);
+ChatterboxJump(box, start_node);
 
 _x = 10;
 _y = 36;
@@ -11,6 +11,14 @@ _y = 36;
 options = []
 
 locked = false
+
+space_bar_counter = 0
+
+function _update_variable(_name, _new_value, _old_value) {
+	struct_set(global.data, _name, _new_value)
+	obj_save_state._save()
+}
+ChatterboxVariableSetCallback(_update_variable)
 
 function _increment_active_options(_inc) {
 	if (array_length(options)==0) {
@@ -41,7 +49,7 @@ function _draw_text() {
     repeat(ChatterboxGetContentCount(box))
     {
         var _string = ChatterboxGetContent(box, _i);
-		show_debug_message(_string)
+		//show_debug_message(_string)
         draw_text_ext(x + _x, y + 36, _string, 24, 600);
         _y += string_height(_string);
         ++_i;
