@@ -1,14 +1,20 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1163,555
+__PrivCrochet_position: 1162,554
 __PrivCrochet_tags: 
 title: BreacherStart
 ---
-You! Your not from Zeta squad, are you? I don't know how you got- ah, I know what you are.
-I feel flattered a pseudo-detective was sent, but I'm afraid it was rather shrewd to send you.
-You see I didn't end up in this situation haphazardly. You may have been met the crew on the way in, but they are not as they seem.
-They triggered a cave in and trapped me here two days ago. I thought I was going to waste away until you arrived.
-Look, time is of the essence. If you've entered here, they are already making plans to trap you as well.
-This repulsor, it's not strong enough to free me, but it may help you subdue them. Take it, secure the threat, and call for help to free me.
-<<set $takeRepulsor to 1>>
+Back to see if i'm rotting away yet are you? Wait, no... You're not from the mining crew.
+Judging from your toolbelt, you're a pseudo detective. I'm a little flattered you were dispatched for little old me.
+Unfortunately, the crew you met on the way in are not as they appear.
+I found evidence of their little murderous scheme. Just when I thought I cornered them they triggered a cave in, trapping me here.
+Do you have anything you could use to free me?
+-> My transport is damaged
+  Then take my Repulsor. It generates a weak force field, unfortunately not strong enough to free me. It may be able to break open your transport though.
+  Now go back and request additional mining crew staff. I'll survive until then. I trust you to handle the existing staff, before you end up like Lawrence.
+  <<set $takeRepulsor to 1>>
+-> No
+  Drats. All I have is my defensive Repulsor tool. It's not strong enough to move these rocks. You probably have better use for it than me.
+  Take it, and go back and request additional mining crew staff. I'll survive until then. I trust you to handle the existing staff, before you end up like Lawrence.
+  <<set $takeRepulsor to 1>>
 ===

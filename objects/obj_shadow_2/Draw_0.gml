@@ -1,7 +1,7 @@
 var _dist = distance_to_object(obj_player)
 var _p = _dist / 100
 var _pr = min(_p, max_darkness)
-if (extra_dark && global.data.useSword == 0) {
+if (extra_dark && global.data.equipped != 2) {
 	_pr += 0.8
 }
 

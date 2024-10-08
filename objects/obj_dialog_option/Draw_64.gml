@@ -6,4 +6,4 @@ if (active == true) {
 	sprite_index = spr_dialog_option
 }
 draw_self()
-draw_text_ext(x+10, y+5, text, 24, 240);
+draw_text_ext(x+10, y+5, text, 24, 340);

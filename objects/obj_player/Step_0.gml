@@ -41,9 +41,7 @@ if (_hspd != 0 || _vspd != 0)
 	image_speed = 1
 } else {
 	if (was_up) {
-		sprite_index = spr_player_walk_u
-		image_speed = 0
-		image_index = 0
+		sprite_index = spr_player_idle_u
 	} else {
 		sprite_index = spr_player_idle
 	}

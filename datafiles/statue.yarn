@@ -1,10 +1,10 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 566,322
+__PrivCrochet_position: 564,320
 __PrivCrochet_tags: 
 title: StatueStart
 ---
-The angel statue stares at the ceiling with a cruel look plastered on its face. Between its clasped hands is a rusty sword.
+The angel statue stares at the ceiling with a cruel look plastered on its face. Behind it's clasped hands a rusty sword dangles from it's waist.
 -> Take the sword
   <<set $takeSword to 1>>
 -> Walk away
@@ -14,6 +14,6 @@ __PrivCrochet_position: 564,85
 __PrivCrochet_tags: 
 title: StatueTakeSword
 ---
-The angel statue stares at the ceiling with a cruel look plastered on its face. Its clasped hands are now empty.
+The angel statue stares at the ceiling with a cruel look plastered on its face.
 -> Walk away
 ===

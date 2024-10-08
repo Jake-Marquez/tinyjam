@@ -1,1 +1,2 @@
-room_goto(rm_intro)
+global.death_reason = 1
+room_goto(rm_outro)

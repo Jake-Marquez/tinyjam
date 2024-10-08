@@ -1,6 +1,6 @@
 if (keyboard_check_released(vk_space)) {
 	
-	if (global.data.takeRepulsor==1) {
+	if (global.data.equipped==3) {
 		global.data.rockDestroyed = 1
 		obj_save_state._save()
 		instance_destroy(collision)

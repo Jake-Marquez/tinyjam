@@ -11,7 +11,7 @@ State... identtitty...
       Bay... locked...
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 839,446
+__PrivCrochet_position: 838,445
 __PrivCrochet_tags: 
 title: TransporterTakeSword
 ---
@@ -21,8 +21,9 @@ State... identtitty...
     -> Walk away
     -> Use Sword
       The transporter cargo bay is pried open enough to retrieve the Lampsi tool, albeit breaking the rusty sword in the process. The other tools are too large to retrieve through the gap.
-      Lampsi should help gather the necessary resources to fix the transporter.
+      With Lampsi equipped, targets should show display empathy toward the user. As always, discretion is encouraged to avoid over stimulating targets.
       <<set $useSword to 1>>
+      <<set $removeSword to 1>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1057,448
@@ -34,7 +35,7 @@ State... identtitty...
     Transporter... cargo bay... open... please... close...
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 834,232
+__PrivCrochet_position: 830,229
 __PrivCrochet_tags: 
 title: TransporterTakeRepulsor
 ---
@@ -43,15 +44,16 @@ State... identtitty...
     Transporter... damaged...
     -> Walk away
     -> Use Repulsor
-      The Repulsor field crumples the cargo door, and you are able to reach in and retrieve the Deimos tool. Deimos and Lampsi should be enough to clear this up.
+      The Repulsor field crumples the cargo door, and you are able to reach in and retrieve the Deimos tool. With Deimos equipped, targets should show display fear of the user.
+      As always, discretion is encouraged to avoid over stimulating targets.
       <<set $useRepulsor to 1>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1054,229
+__PrivCrochet_position: 1053,228
 __PrivCrochet_tags: 
 title: TransporterFullyOpen
 ---
 State... identtitty...
 -> Pseudo Mu
-    Transporter...  open...
+    Transporter...  open... transport... available
 ===

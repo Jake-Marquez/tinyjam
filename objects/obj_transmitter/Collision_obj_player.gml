@@ -4,11 +4,11 @@ if (keyboard_check_released(vk_space)
 	var _start_node = "TransporterStart"
 	if (global.data.useRepulsor == 1) {
 		_start_node = "TransporterFullyOpen"
-	} else if (global.data.takeRepulsor == 1) {
+	} else if (global.data.equipped == 3) {
 		_start_node = "TransporterTakeRepulsor"
 	} else if (global.data.useSword == 1) {
 		_start_node = "TransporterPartiallyOpen"
-	} else if (global.data.takeSword == 1) {
+	} else if (global.data.equipped == 1) {
 		_start_node = "TransporterTakeSword"
 	}
 

@@ -1,21 +1,57 @@
 x = 310
 y = 700
 
+options = []
+locked = false
+space_bar_counter = 0
+
+if (struct_exists(global, "dialog_close_timeout")) {
+	if ((current_time - global.dialog_close_timeout) < 1000) {
+		var _map = ds_map_create();
+		_map[? "id"] = "dialogue_closed";
+		_map[? "result"] = true;
+		event_perform_async(ev_async_system_event, _map);
+		instance_destroy();
+		return;
+	}
+}
+
 ChatterboxLoadFromFile(yarn_file);
 box = ChatterboxCreate(yarn_file);
 ChatterboxJump(box, start_node);
 
-_x = 10;
-_y = 36;
-
-options = []
-
-locked = false
-
-space_bar_counter = 0
-
 function _update_variable(_name, _new_value, _old_value) {
 	struct_set(global.data, _name, _new_value)
+	
+	if (_name == "takeSword") {
+		array_push(global.data.inventory, 1)
+	}
+	
+	if (_name == "takeRepulsor") {
+		array_push(global.data.inventory, 3)
+		var _map = ds_map_create();
+		_map[? "id"] = "inventory_updated";
+		_map[? "result"] = true;
+		event_perform_async(ev_async_system_event, _map);
+	}
+	
+	if (_name == "useRepulsor") {
+		array_push(global.data.inventory, 4)
+		var _map = ds_map_create();
+		_map[? "id"] = "inventory_updated";
+		_map[? "result"] = true;
+		event_perform_async(ev_async_system_event, _map);
+	}
+	
+	if (_name == "removeSword") {
+		global.data.inventory = obj_save_state._remove_from_array(global.data.inventory, 1)
+		array_push(global.data.inventory, 2)
+		var _map = ds_map_create();
+		_map[? "id"] = "inventory_updated";
+		_map[? "result"] = true;
+		event_perform_async(ev_async_system_event, _map);
+	}
+	
 	obj_save_state._save()
 }
 ChatterboxVariableSetCallback(_update_variable)
@@ -43,6 +79,8 @@ function _increment_active_options(_inc) {
 }
 
 function _draw_text() {
+	var _x = 10;
+	var _y = 36;
 	//Draw all content
 	draw_text(x + 10, y + 10, title)
     var _i = 0;
@@ -85,7 +123,7 @@ function _draw_options() {
 		var _count = ChatterboxGetOptionCount(box);
 		for (var _c = 0; _c < _count; _c++) {
 			var _string = ChatterboxGetOption(box, _c);
-			array_push(options, instance_create_layer(710, 560-(36*_c), "Instances", obj_dialog_option, { 
+			array_push(options, instance_create_layer(590, 560-(36*_c), "Instances", obj_dialog_option, { 
 				text: _string,
 				param: _c,
 				host: id,

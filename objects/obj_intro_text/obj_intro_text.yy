@@ -10,8 +10,8 @@
   "name":"obj_intro_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"intro",
-    "path":"folders/Objects/intro.yy",
+    "name":"floating_text",
+    "path":"folders/Objects/floating_text.yy",
   },
   "parentObjectId":null,
   "persistent":false,
