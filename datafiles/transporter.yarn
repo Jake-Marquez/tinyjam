@@ -21,7 +21,7 @@ State... identtitty...
     -> Walk away
     -> Use Sword
       The transporter cargo bay is pried open enough to retrieve the Lampsi tool, albeit breaking the rusty sword in the process. The other tools are too large to retrieve through the gap.
-      With Lampsi equipped, targets should show display empathy toward the user. As always, discretion is encouraged to avoid over stimulating targets.
+      With Lampsi equipped, targets should show empathy toward the user. As always, discretion is encouraged to avoid over stimulating targets.
       <<set $useSword to 1>>
       <<set $removeSword to 1>>
 ===
@@ -35,7 +35,7 @@ State... identtitty...
     Transporter... cargo bay... open... please... close...
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 830,229
+__PrivCrochet_position: 829,228
 __PrivCrochet_tags: 
 title: TransporterTakeRepulsor
 ---
@@ -44,7 +44,7 @@ State... identtitty...
     Transporter... damaged...
     -> Walk away
     -> Use Repulsor
-      The Repulsor field crumples the cargo door, and you are able to reach in and retrieve the Deimos tool. With Deimos equipped, targets should show display fear of the user.
+      The Repulsor field crumples the cargo door, and you are able to reach in and retrieve the Deimos tool. With Deimos equipped, targets should display fear of the user.
       As always, discretion is encouraged to avoid over stimulating targets.
       <<set $useRepulsor to 1>>
 ===

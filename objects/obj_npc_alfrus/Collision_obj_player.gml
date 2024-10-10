@@ -3,14 +3,17 @@
 if (keyboard_check_released(vk_space) 
 	&& (dialog == noone || !instance_exists(dialog))) {
 		
-	if (room == rm_main_2) {
-		global.death_reason = 2
-		room_goto(rm_outro)
-		return
+	var _sn = "AlfusStart"
+		
+	if (is_conflict) {
+		_sn =  "AlfusConflict"
+		spoken_to = true
 	}
 	
 	dialog = instance_create_layer(x,y,"Instances",obj_dialog, {
-		title: "STEVE"
+		title: "ALFUS",
+		yarn_file: "alfus.yarn",
+		start_node: _sn
 	})
 	
 	with (obj_player) {

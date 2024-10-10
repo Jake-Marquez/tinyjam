@@ -1,0 +1,28 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1010,269
+__PrivCrochet_tags: 
+title: AlfusStart
+---
+Empty Text
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1235,271
+__PrivCrochet_tags: 
+title: AlfusConflict
+---
+<<if equipped() == 0 || equipped() == 1>>
+You, if only you hadn't shown up. I can't let you get involved here. Lawrence is one thing, we'll do what needs to be done, but we can't stop the mining now.
+My sympathy for you has run dry, now leave us.
+<<endif>>
+
+<<if equipped() == 2>>
+You, when you showed up I wasn't sure what to think. If only we had more time, I feel like Lawrence's memories could be honored. But this situation...
+Far from innocent I am, but this feels like a new low. you should steel yourself and escape from here...
+<<endif>>
+
+<<if equipped() == 4>>
+When you first appeared I had no idea! This, this, this feeling down my spine... What are you? Yes, you must have been the cause of this from the beginning!
+Get! Get out of here, quick, someone stop him!
+<<endif>>
+===

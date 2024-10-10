@@ -1,0 +1,28 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 938,134
+__PrivCrochet_tags: 
+title: FilmontStart
+---
+Empty Text
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1172,140
+__PrivCrochet_tags: 
+title: FilmontConflict
+---
+<<if equipped() == 0 || equipped() == 1>>
+This would surely come to pass no matter what happened. We all have a place to be in the world, and it seems this is ours. 
+It was nice to meet you, albeit briefly, detective.
+<<endif>>
+
+<<if equipped() == 2>>
+Fate has brought you here, to me. It's unfortunate under the circumstances, honestly I may have more a hand in this than I care to admit. Please, listen carefully.
+This is not as it seems, you should escape while you can. Call for help, quickly.
+<<endif>>
+
+<<if equipped() == 4>>
+Fate, fate is so fickle. That horrifying visage, this unholy stench, you've come for retribution havent you? Lawrence, that was a sin yet paid for.
+Please, I have yet to accomplish so much, mercy! If you have it in your soul!
+<<endif>>
+===

@@ -16,9 +16,12 @@ if (struct_exists(global, "dialog_close_timeout")) {
 	}
 }
 
+function _get_equipped() { return global.data.equipped }
+
 ChatterboxLoadFromFile(yarn_file);
 box = ChatterboxCreate(yarn_file);
 ChatterboxJump(box, start_node);
+ChatterboxAddFunction("equipped", _get_equipped);
 
 function _update_variable(_name, _new_value, _old_value) {
 	struct_set(global.data, _name, _new_value)
@@ -79,10 +82,12 @@ function _increment_active_options(_inc) {
 }
 
 function _draw_text() {
+	
+	var _title = title;
+	
 	var _x = 10;
 	var _y = 36;
-	//Draw all content
-	draw_text(x + 10, y + 10, title)
+	
     var _i = 0;
     repeat(ChatterboxGetContentCount(box))
     {
@@ -90,8 +95,16 @@ function _draw_text() {
 		//show_debug_message(_string)
         draw_text_ext(x + _x, y + 36, _string, 24, 600);
         _y += string_height(_string);
+		var _metadata_title = ChatterboxGetContentMetadata(box, _i);
+		
+		if (array_length(_metadata_title) > 0) {
+			_title = _metadata_title[0]
+		}
+		
         ++_i;
     }
+	
+	draw_text(x + 10, y + 10, _title)
 }
 
 function _select_option() {

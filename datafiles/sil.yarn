@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1088,414
+__PrivCrochet_position: 1084,409
 __PrivCrochet_tags: 
 title: SilStart
 ---
@@ -22,4 +22,24 @@ You don't look like a miner... where's your protective equipment?
       Earlier this morning was the last time I saw him. He was pouring over some map of the mine I believe.
 -> I'm new here
   Well you can't be walking around here like that. Talk to Alfus, that feather-head over there for help.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1312,404
+__PrivCrochet_tags: 
+title: SilConflict
+---
+<<if equipped() == 0 || equipped() == 1>>
+Oh, it's just terrible, he.. I just wish Lawrence was still here. Things could have gone back to the way they were.
+Cu's never made us rich but, we made it work, as best we could. But It's just not right... not what happened to him, or this, or any of it all. I'm sorry detective...
+<<endif>>
+
+<<if equipped() == 2>>
+I.. I have no choice in this... what happened to Lawrence and this whole plan is awful, but I can't let anyone else from Zeta be hurt...
+If you know whats good for you, turn and run, as quickly as you can!
+<<endif>>
+
+<<if equipped() == 4>>
+Please! I never had anything to do with this, I can't stand to see anyone in pain!
+Oh god, I'll do anything, please just don't hurt me. I just do what he tells me to!
+<<endif>>
 ===
