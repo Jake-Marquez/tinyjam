@@ -1,30 +1,59 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1084,409
+__PrivCrochet_position: 1081,406
 __PrivCrochet_tags: 
 title: SilStart
 ---
+<<if equipped() == 0 || equipped() == 1>>
 You don't look like a miner... where's your protective equipment?
 -> I'm Pseudo Mu
   Well aren't you fancy, what could you be doing down here? If your looking for the main Cu prime mine, you need to go to floor 33, not floor 32.
-    -> I'm here about the murder
+    -> I'm here about the accident
       Aw... another detective. Lawrence was always so friendly to me. To see him like that, was just heart breaking.
       You know we looked for him for almost two days straight? Alfus kept telling me we we needed to go back and rest but Filmont and I...
       How could we even sleep, feet away from that empty cot?
       The last one said we couldn't move the body until the investigation finished, so the door to the mine has been barred up since.
-      -> Have you seen Detective Breacher
+      -> Have you seen Breacher
         I believe he came through, has anyone ever told you, you look quite similar to each other?
         He made such a scene, throwing tape everywhere, blocking off the mines. I wish we could just get on with this, it's terrible I can't even mourn properly.
-        Earlier this morning was the last time I saw him. He was pouring over some map of the mine I believe.
-    -> Have you seen Detective Breacher
+        Earlier this morning was the last time I saw him. He was pouring over some map of the mine I believe. Let me know if theres anything else I can help with.
+        <<set $metSil to 1>>
+    -> I'm here for Breacher
       I believe he came through, has anyone ever told you, you look quite similar to each other?
       He made such a scene, throwing tape everywhere, blocking off the mines. I wish we could just get on with this, it's terrible I can't even mourn properly.
-      Earlier this morning was the last time I saw him. He was pouring over some map of the mine I believe.
+      Earlier this morning was the last time I saw him. He was pouring over some map of the mine I believe. Let me know if theres anything else I can help with.
+      <<set $metSil to 1>>
 -> I'm new here
   Well you can't be walking around here like that. Talk to Alfus, that feather-head over there for help.
+<<endif>>
+
+<<if equipped() == 2>>
+Excuse me! you can't be down here without equipment... you wouldn't want to ruin those fancy clothes right?
+-> I'm Pseudo Mu
+  What a strange name, you must be foreign. Is this your first time in the dungeon? I could certainly show you the ropes.
+    -> I'm here about the accident
+      The accident? Oh I wish this would be over with already. I've been crying every night, hoping it would just go away.
+      We were so hopeful, praying, even though I don't believe in that sort of thing. To find Lawrence like that was terrible.
+      You understand right? You seem like you know about this sort of thing, work squabbles, workplace accidents... 
+      I think we just need to help with the investigation, and it will disappear... before my heart gives out...
+      -> Have you seen Breacher
+        Oh that old salty dog? He's always kicking around my stones, you know I had them sorted by worth! And then there they go along the ground...
+        I'm sure he's around somewhere, off exploring the caves to the east no doubt. He's always going where he shouldnt... or should(?) be....
+        But *you* shouldn't go there at all. Its unstable and I'd hate to lose someone like you so soon after meeting.
+        Feel free to ask me anything else new friend!
+        <<set $metSil to 1>>
+    -> I'm here for Breacher
+      Oh that old salty dog? He's always kicking around my stones, you know I had them sorted by worth! And then there they go along the ground...
+      I'm sure he's around somewhere, off exploring the caves to the east no doubt.
+      But you shouldn't go there at all. Its unstable and I'd hate to lose someone like you so soon after meeting.
+      Feel free to ask me anything else new friend!
+      <<set $metSil to 1>>
+-> I'm new here
+  Alfus... can probably get you situated. Looking forward to working with you!
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1312,404
+__PrivCrochet_position: 1513,409
 __PrivCrochet_tags: 
 title: SilConflict
 ---
@@ -41,5 +70,50 @@ If you know whats good for you, turn and run, as quickly as you can!
 <<if equipped() == 4>>
 Please! I never had anything to do with this, I can't stand to see anyone in pain!
 Oh god, I'll do anything, please just don't hurt me. I just do what he tells me to!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1291,409
+__PrivCrochet_tags: 
+title: SilMet
+---
+<<if equipped() == 0 || equipped() == 1>>
+Nice to see you again!
+-> About the western mine
+  You should be quite careful. There are holes all over from drilling, and we don't necessarily have the equipment to get you out if you fall in.
+  The mine is dark and there is no formal map for it yet. It may be easy to get lost.
+  We're... already in this situation... please don't make it worse.
+-> About the eastern mine
+  I'm sorry but I don't know much. At one point it was illuminated well, but a power surge or other issue destroyed our energy network some months ago.
+  I believe Alfus is working on a fix, but in the meantime, stay in here with us.
+-> About Breacher
+  Have you found him yet? It can't have been that long since he wondered off.
+  I was dispatched because he failed to make his daily report. Twice. #PSEUDO MU
+  That long? I know we don't have the sun but it feels wrong... you're starting to worry me with all these questions...
+-> About Lawrence
+  Have you found out anything? Can't you talk to your mission control, and get a team down here? Having his body surrounded my tape, It's just terrible.
+  We deserve to send him off right.
+<<endif>>
+
+<<if equipped() == 2>>
+It's so great to see you again! Are you glowing or something? I feel like you're brighter...
+-> About the western mine
+  My old injury slows me down a lot, but I know the place like the back of my hand. You do not want to be in there, trust me.
+  There are huge holes all over the floor, loose walls, and a cave in wouldn't surprise me at all.
+  You should just stay out here with me and the rest of the crew. We get along so well, I couldn't stand any other accidents happening.
+-> About the eastern mine
+  At one point it was illuminated well, but a power surge or other issue destroyed our energy network some months ago.
+  Alfus keeps telling us not to go in there. I know hes working on something, I just can't exactly remember what it is. 
+  I trust him though, he's really a good leader, I'm sure you'll warm up to him quickly.
+-> About Breacher
+  Have you found him yet? I hope i've been helpful to you.
+  I have not found him. #PSEUDO MU
+  Really? Time seems to pass so quickly... you're starting to worry me with all these questions...
+-> About Lawrence
+  I feel terrible about it. Accidents, you know, a lot of the time they're not really accidents, its just someone wont listen.
+  They feel they need to prove something or other, I don't know maybe people just like to fly too close to the sun.
+  -> What do you mean?
+    I mean... what I mean is... It's just hard to believe Lawrence is gone... I'm still struggling with it.
+    That's all I mean.
 <<endif>>
 ===

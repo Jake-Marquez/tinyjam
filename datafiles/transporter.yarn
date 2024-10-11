@@ -1,6 +1,6 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 615,451
+__PrivCrochet_position: 612,448
 __PrivCrochet_tags: 
 title: TransporterStart
 ---
@@ -9,9 +9,11 @@ State... identtitty...
     Transporter... damaged...
     -> Open cargo bay
       Bay... locked...
+      I don't know how the transport got damaged, but untill I get it open I can't access my tools. This is also my ride home, so thats concerning...#PSEUDO MU
+      I should try and find something to pry this open with...#PSEUDO MU
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 838,445
+__PrivCrochet_position: 837,444
 __PrivCrochet_tags: 
 title: TransporterTakeSword
 ---

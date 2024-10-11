@@ -8,6 +8,8 @@ if (keyboard_check_released(vk_space)
 	if (is_conflict) {
 		_sn =  "FilmontConflict"
 		spoken_to = true
+	} else if (global.data.filmontMet == 1) {
+		_sn = "FilmontMet"
 	}
 	
 	dialog = instance_create_layer(x,y,"Instances",obj_dialog, {

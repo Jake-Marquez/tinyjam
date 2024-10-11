@@ -17,11 +17,10 @@ if (struct_exists(global, "dialog_close_timeout")) {
 }
 
 function _get_equipped() { return global.data.equipped }
-
+ChatterboxAddFunction("equipped", _get_equipped);
 ChatterboxLoadFromFile(yarn_file);
 box = ChatterboxCreate(yarn_file);
 ChatterboxJump(box, start_node);
-ChatterboxAddFunction("equipped", _get_equipped);
 
 function _update_variable(_name, _new_value, _old_value) {
 	struct_set(global.data, _name, _new_value)
@@ -31,6 +30,7 @@ function _update_variable(_name, _new_value, _old_value) {
 	}
 	
 	if (_name == "takeRepulsor") {
+		global.data.inventory = obj_save_state._remove_from_array(global.data.inventory, 3)	
 		array_push(global.data.inventory, 3)
 		var _map = ds_map_create();
 		_map[? "id"] = "inventory_updated";
@@ -89,6 +89,7 @@ function _draw_text() {
 	var _y = 36;
 	
     var _i = 0;
+	draw_set_font(fnt_main)
     repeat(ChatterboxGetContentCount(box))
     {
         var _string = ChatterboxGetContent(box, _i);
@@ -103,7 +104,7 @@ function _draw_text() {
 		
         ++_i;
     }
-	
+	draw_set_font(fnt_main_bold)
 	draw_text(x + 10, y + 10, _title)
 }
 
@@ -131,7 +132,7 @@ function _select_option() {
 }
 
 function _draw_options() {
-	
+	draw_set_font(fnt_main)
 	if (array_length(options) == 0) {
 		var _count = ChatterboxGetOptionCount(box);
 		for (var _c = 0; _c < _count; _c++) {

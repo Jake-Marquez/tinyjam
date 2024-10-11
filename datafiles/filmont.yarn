@@ -1,10 +1,43 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 938,134
+__PrivCrochet_position: 726,136
 __PrivCrochet_tags: 
 title: FilmontStart
 ---
-Empty Text
+<<if equipped() == 0 || equipped() == 1>>
+A weary traveler upon the doorstep of Zeta squad? Color me surprised!
+-> I'm Pseudo Mu
+  A pseudo detective?
+  What are you doing here? There was already a peace keeper here earlier. I'm busy, leave me be.
+  <<set $filmontMet to 1>>
+-> I am a traveler
+  A trickster perhaps, but a traveler you are not. The dungeon is no place for travelers. Move along, we have work!
+  <<set $filmontMet to 1>>
+<<endif>>
+
+<<if equipped() == 2>>
+A weary traveler upon the doorstep of Zeta squad? Color me surprised!
+-> I'm Pseudo Mu
+  A pseudo detective?
+  How rare, I have to admit I have a vague sense of interest in your kind. I've always wondered how you do your job, what makes you tick.
+  You have to keep the mind busy, when doing dull work like mining. Zeta squad, no, manual labor in general must be so droll to you.
+  Let me know if I can help with anything.
+  -> About the accident
+    Yes, that fools only accident was speaking out of turn.
+    Speaking out of turn how? #PSEUDO MU
+    What am I saying, sorry, I meant slipping, slipping out of turn. What happened to him was terrible, really, even if he was no help I hate to see him go like that.
+    I should... I should get back to work, I don't think I'm feeling well...
+    <<set $filmontMet to 1>>
+  -> About Breacher
+    Usually I'm not a fan of the hands of mission control, but you seem to be quite forthright. Breacher was surly and demanding.
+    He took a map from Alfus, and I haven't seen him since, although thats to be expected...
+    Expected? #PSEUDO MU
+    No... No I should... I should get back to work- I don't think I'm feeling well...
+    <<set $filmontMet to 1>>
+-> I am a traveler
+  Marvelous, I have to say i'm quite busy but I have an urge to hear of your travels. Please, speak to me again and introduce yourself.
+  <<set $filmontMet to 1>>
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1172,140
@@ -24,5 +57,44 @@ This is not as it seems, you should escape while you can. Call for help, quickly
 <<if equipped() == 4>>
 Fate, fate is so fickle. That horrifying visage, this unholy stench, you've come for retribution havent you? Lawrence, that was a sin yet paid for.
 Please, I have yet to accomplish so much, mercy! If you have it in your soul!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 948,134
+__PrivCrochet_tags: 
+title: FilmontMet
+---
+<<if equipped() == 0 || equipped() == 1>>
+Ah, you're back again.
+-> About Zeta Squad
+  We've been here for months pulling up Cu prime. It pays the bills, but these deposits aren't even that impressive. At this pace, we won't finish before the year is up.
+-> About Breacher
+  Didn't we already go on about this? I can't say much. He came in and kicked us all out of the main mine shaft. Put up his tape and started investigating. I haven't seen the bloke since.
+-> About Lawrence
+  A good friend of mine. Well really he was recommended by Alfus... a hard worker he called him. That's all I know.
+<<endif>>
+
+<<if equipped() == 2>>
+My well traveled friend has returned! You are positively glowing, what can I do for you?
+-> About Zeta Squad
+  It's dreadful, we'll never make enough to meet the quota. I'll be lucky to see sunlight in the next 6 months. Honestly it's breaking my spirit being trapped here for so long.
+  They've been continuously denying our requests for an extended break.
+  Everytime Alfus comes up with some scheme, I've ignored him, but lately I think I've begun to play along with him.
+  What kind of scheme? #PSEUDO MU
+  He said he found some Pt prime, but this isn't the first time. Everytime he sees a shiny speck, he starts the rumors.
+  I'm sure you know all about it. This probably doesn't shock you at all, our desperate pipe dreams down here...
+-> About Breacher
+  Didn't we already go on about this? I can't stand him.
+  You two must have taken seperate training, because he had no idea how to communicate. It was always his way or the highway.
+  This whole thing seems silly to me, why we can't just do things the easy way? it's beyond me.
+  So you know where he is? #PSEUDO MU
+  Breacher? No I, well I mean, I saw him... You don't want to deal with him anyway, trust me. Such a bore. If I were you I'd just write him off as a loss.
+-> About Lawrence
+  A good guy... well really quite a philistine. But we're moving rocks here so...
+  It seems he failed in that task as well, to the detriment of his life. It was truly hard to watch- between you and me, you get it right?
+  We can't catch a break, and if we do, a hand is waiting to snatch it from under us.
+  How did you catch a break?#PSEUDO MU
+  Well the Pt.. I mean hypothetically, if we did find Pt prime, no doubt the mining administration would take their cut, the government, even Alfus...
+  At the end we wouldn't see much. Greed and irony are quite frightful.
 <<endif>>
 ===

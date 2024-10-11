@@ -8,7 +8,11 @@ if (keyboard_check_released(vk_space)
 	if (is_conflict) {
 		_sn =  "SilConflict"
 		spoken_to = true
+	} else if (global.data.metSil == 1) {
+		_sn = "SilMet"
 	}
+	
+	
 	
 	dialog = instance_create_layer(x,y,"Instances",obj_dialog, {
 		title: "SIL",

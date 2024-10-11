@@ -8,6 +8,8 @@ if (keyboard_check_released(vk_space)
 	if (is_conflict) {
 		_sn =  "AlfusConflict"
 		spoken_to = true
+	} else if (global.data.alfusMet == 1) {
+		_sn =  "AlfusMet"
 	}
 	
 	dialog = instance_create_layer(x,y,"Instances",obj_dialog, {

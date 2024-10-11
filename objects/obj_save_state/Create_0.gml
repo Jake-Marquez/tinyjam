@@ -11,6 +11,9 @@ function _save_defaults() {
 		useSword: 0,
 		useRepulsor: 0,
 		rockDestroyed: 0,
+		metSil: 0,
+		filmontMet: 0,
+		alfusMet: 0,
 		equipped: 0,
 		inventory: [0],
 		items: [

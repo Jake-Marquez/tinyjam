@@ -18,3 +18,24 @@ Do you have anything you could use to free me?
   Take it, and go back and request additional mining crew staff. I'll survive until then. I trust you to handle the existing staff, before you end up like Lawrence.
   <<set $takeRepulsor to 1>>
 ===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1389,547
+__PrivCrochet_tags: 
+title: BreacherConflict
+---
+<<if equipped() == 0 || equipped() == 1>>
+Quietly now, let's slowly make our way to the transport. Were you able to open it? 
+I fear with the falling rocks it may be our only way out.
+It’s good that you’ve trusted me. The others have already dirtied their hands. Now, lead the way.
+<<endif>>
+
+<<if equipped() == 2>>
+Quietly now, please, don’t make me do this… I… I can’t bear to face you like this. Please just go away, before I do something I regret.
+<<endif>>
+
+<<if equipped() == 4>>
+What in god’s name are you? Stay away from me!
+Detective Breacher points the gun at you, hands shaking uncontrollably… #INFO
+Back! Get out of here! I won't die until I take what's mine!
+<<endif>>
+===

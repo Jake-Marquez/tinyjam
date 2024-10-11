@@ -13,7 +13,7 @@ if (shake)
 
       if (shake_magnitude <= 0) 
       { 
-         camera_set_view_pos(view_camera[0], initx, inity); 
+         //camera_set_view_pos(view_camera[0], initx, inity); 
          shake = false; 
       } 
    } 

@@ -22,6 +22,7 @@ switch (inventory_id) {
 }
 
 if (active == true) {
+	draw_set_font(fnt_main)
 	var _n = "Hand";
 	if (inventory_id != 0) {
 		var _item = obj_save_state._find_item_by_key(global.data.items, "id", inventory_id)

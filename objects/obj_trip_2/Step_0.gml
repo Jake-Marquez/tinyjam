@@ -15,8 +15,8 @@ if (place_meeting(x, y, obj_player)) {
 	}
 	
 	instance_create_layer(x,y,"Instances",obj_pan, {
-		panx: 360,
-		pany: 620
+		panx: 555,
+		pany: 420
 	})
 	
 	instance_destroy()

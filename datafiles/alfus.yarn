@@ -1,13 +1,38 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1010,269
+__PrivCrochet_position: 1008,267
 __PrivCrochet_tags: 
 title: AlfusStart
 ---
-Empty Text
+<<if equipped() == 0 || equipped() == 1>>
+Ah, the detective. I'm sorry, pseudo detective. Or do they give you names?
+-> I'm Pseudo Mu
+  So they do! I've only seen your type in capital buildings, on my few trips. I have to say I was expecting you. I'm Alfus, Zeta Squad Captain.
+  So you know why I'm here? #PSEUDO MU
+  Yes, It's unfortunate, but our operation has slowed down because of the accident and at this point we are losing money each hour our drills can't operate.
+  Your colleague, i'm sure, was operating above his paygrade and has run off somewhere. Until we locate him, the gate to the main mine shaft will be sealed.
+  You may be able to navigate the western mine unaided, but you will need a light source for the eastern mine. Let me know if you have any questions.
+  And be careful.
+  <<set $alfusMet to 1>>
+<<endif>>
+
+<<if equipped() == 2>>
+You must be the detective, I must say your have a radiant appearance!
+-> I'm Pseudo Mu
+  Please to meet you, I'm Alfus, Captain of Zeta Squad. I never thought I'd meet a pseudo-detective in the flesh before. Well, not until recently.
+  So you know why I'm here? #PSEUDO MU
+  Yes, It's unfortunate, i'm sure you have better things to be doing. This accident, I truly am embarrased it happened under my watch.
+  But until this is resolved we can't continue work.
+  Your colleague, Breacher I believe, was here earlier but has gone off somewhere. He was quite suspicious of us and rude, unlike you. 
+  If you're looking for him, you'll need to get a light source to navigate the eastern mine. It's too perilous without one.
+  Is Breacher in the eastern mine? #PSEUDO MU
+  No, I mean, you will need a light source to navigate anywhere... thats what I mean... Its quite dangerous you know...
+  Let me know if you need anything else...
+  <<set $alfusMet to 1>>
+<<endif>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1235,271
+__PrivCrochet_position: 1440,270
 __PrivCrochet_tags: 
 title: AlfusConflict
 ---
@@ -24,5 +49,47 @@ Far from innocent I am, but this feels like a new low. you should steel yourself
 <<if equipped() == 4>>
 When you first appeared I had no idea! This, this, this feeling down my spine... What are you? Yes, you must have been the cause of this from the beginning!
 Get! Get out of here, quick, someone stop him!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1223,267
+__PrivCrochet_tags: 
+title: AlfusMet
+---
+<<if equipped() == 0 || equipped() == 1>>
+Back so soon? Does this mean we can begin work again?
+-> About Mining
+  The initial reports had so much promise, but we can barely bring up enough Cu prime to keep us working. It must mean we haven't quite hit the main deposit yet.
+  If you ask me, I think there may be something else down here they really want us to find.
+-> About Breacher
+  Have you found him yet?
+  I have not #PSEUDO MU
+  Well keep looking! I hate to rush you but it is important that we keep moving. I would hate for Lawrence's body to decompose to the point it can't be properly mourned.
+-> About the Transport
+  What about it? I'm smart enough to not touch mission control property. I wouldn't have even noticed if Sil didn't mention it.
+<<endif>>
+
+<<if equipped() == 2>>
+-> About Mining
+  The initial reports were promising, you see it forecasted a higher than normal chance of Pt prime amongst the Cu. If we get lucky and find a vein...
+  Well, lets just say we'll be cashing out.
+  The others say I'm crazy, but you know you how workers are. A little overtime never killed anybody. Well I mean, Lawrence...
+  But all said and done it paid off if you ask me, just a couple loose ends to tie up
+  What did you find?#PSEUDO MU
+  No... we... what was I talking about? We didn't find anything... anything yet! I'm sure its just beyond the horizon. We just need to keep drilling.
+-> About Breacher
+  I wish he hadn't taken my map earlier. I was hoping to re-survey the western mine. But he wanted to see the eastern mines...
+  Is that where he is? #PSEUDO MU
+  I couldn't tell you, honestly. Trust me.
+  Trust you...?#PSEUDO MU
+  I mean, trust me to help. Just like Breacher. Wherever he is...
+-> About the Transport
+  Yea I saw it got damaged. But you can't expect something like that to last long down here. You see those all these crates and carts? There made tough.
+  Any old falling rock can't destroy them.
+  There wasn't any rocks on the floor by the transport#PSEUDO MU
+  Well, I don't know maybe somone was moving something nearby and dinged it, accidents happen...
+  Like with a pick axe?#PSEUDO MU
+  Did I say that? I mean, it's possible... I'm just trying to stay away... from that area... 
+  I don't feel so well, let's talk later...
 <<endif>>
 ===
